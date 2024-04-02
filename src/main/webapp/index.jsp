@@ -1,124 +1,88 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>HTML Form</title>
-        <style>
-            body {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-                margin: 0;
-                background-color: #f0f0f0;
-            }
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-            form {
-                width: 400px;
-                background-color: #fff;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 0 10px
-                    rgba(0, 0, 0, 0.1);
-            }
+* {
+  box-sizing: border-box;
+}
 
-            fieldset {
-                border: 1px solid black;
-                padding: 10px;
-                margin: 0;
-            }
+.bg-img {
+  /* The image used */
+  background-image: url("img_nature.jpg");
 
-            legend {
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
+  min-height: 380px;
 
-            label {
-                display: block;
-                margin-bottom: 5px;
-            }
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
 
-            input[type="text"],
-            input[type="email"],
-            input[type="password"],
-            textarea,
-            input[type="date"] {
-                width: calc(100% - 20px);
-                padding: 8px;
-                margin-bottom: 10px;
-                box-sizing: border-box;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-            }
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
 
-            input[type="radio"] {
-                margin-left: 20px;
-            }
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
 
-            input[type="submit"] {
-                padding: 10px 20px;
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
 
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <form>
-            <fieldset>
-                <legend>
-                    User personal information
-                </legend>
-                <label
-                    >Enter your full name</label
-                >
-                <input type="text" name="name" />
-                <label>Enter your email</label>
-                <input
-                    type="email"
-                    name="email"
-                />
-                <label>Enter your password</label>
-                <input
-                    type="password"
-                    name="pass"
-                />
-                <label
-                    >Confirm your password</label
-                >
-                <input
-                    type="password"
-                    name="confirmPass"
-                />
-                <label>Enter your gender</label>
-                <input
-                    type="radio"
-                    name="gender"
-                    value="male"
-                />Male
-                <input
-                    type="radio"
-                    name="gender"
-                    value="female"
-                />Female
-                <input
-                    type="radio"
-                    name="gender"
-                    value="others"
-                />Others
-                <label
-                    >Enter your Date of
-                    Birth</label
-                >
-                <input type="date" name="dob" />
-                <label>Enter your Address:</label>
-                <textarea
-                    name="address"
-                ></textarea>
-                <input
-                    type="submit"
-                    value="submit"
-                />
-            </fieldset>
-        </form>
-    </body>
+/* Set a style for the submit button */
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>Login Form</h2>
+<div class="bg-img">
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+
+<p>This example creates a form on a responsive image. Try to resize the browser window to see how it always will cover the whole width of the screen, and that it scales nicely on all screen sizes.</p>
+
+</body>
 </html>
