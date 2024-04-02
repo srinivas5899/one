@@ -1,120 +1,124 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+    <head>
+        <title>HTML Form</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+                background-color: #f0f0f0;
+            }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
+            form {
+                width: 400px;
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px
+                    rgba(0, 0, 0, 0.1);
+            }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
+            fieldset {
+                border: 1px solid black;
+                padding: 10px;
+                margin: 0;
+            }
 
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
+            legend {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            textarea,
+            input[type="date"] {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
+            input[type="radio"] {
+                margin-left: 20px;
+            }
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
+            input[type="submit"] {
+                padding: 10px 20px;
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-</style>
-</head>
-<body>
-
-<h2>Please Provide Your Feedback</h2>
-
-<div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">First Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Last Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Country</label>
-      </div>
-      <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
-</div>
-
-</body>
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    User personal information
+                </legend>
+                <label
+                    >Enter your full name</label
+                >
+                <input type="text" name="name" />
+                <label>Enter your email</label>
+                <input
+                    type="email"
+                    name="email"
+                />
+                <label>Enter your password</label>
+                <input
+                    type="password"
+                    name="pass"
+                />
+                <label
+                    >Confirm your password</label
+                >
+                <input
+                    type="password"
+                    name="confirmPass"
+                />
+                <label>Enter your gender</label>
+                <input
+                    type="radio"
+                    name="gender"
+                    value="male"
+                />Male
+                <input
+                    type="radio"
+                    name="gender"
+                    value="female"
+                />Female
+                <input
+                    type="radio"
+                    name="gender"
+                    value="others"
+                />Others
+                <label
+                    >Enter your Date of
+                    Birth</label
+                >
+                <input type="date" name="dob" />
+                <label>Enter your Address:</label>
+                <textarea
+                    name="address"
+                ></textarea>
+                <input
+                    type="submit"
+                    value="submit"
+                />
+            </fieldset>
+        </form>
+    </body>
 </html>
