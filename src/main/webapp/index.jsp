@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Student Registration Form</title>
+<title>Registration Form</title>
 
 </head>
  
