@@ -5,7 +5,7 @@
 </head>
  
 <body>
-<h3>REGISTRATION FORM</h3>
+<h3>student REGISTRATION FORM</h3>
 
  
 <table align="center" cellpadding = "10">
